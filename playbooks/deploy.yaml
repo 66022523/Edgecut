@@ -1,0 +1,13 @@
+- name: Deploy Docker Container
+  hosts: dockerservers
+  gather_facts: false
+  remote_user: root
+  tasks:
+    - name: Creating the Container
+      docker_container:
+        name: ansible-neogym-container
+        image: ansible-neogym:latest
+        ports:
+          - "80:80"
+        state: started
+        restart: true

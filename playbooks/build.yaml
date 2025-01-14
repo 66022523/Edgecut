@@ -1,0 +1,13 @@
+- name: Build Docker Image
+  hosts: dockerservers
+  gather_facts: false
+  remote_user: root
+  tasks:
+    - name: Building Docker Image
+      docker_image:
+        name: ansible-neogym:latest
+        source: build
+        build:
+          path: ~/ansible-neogym
+        state: present
+        force_source: true
