@@ -3,7 +3,7 @@ pipeline {
     stages {      
         stage("Copy file to Docker server"){
             steps {
-                sh "scp -r /var/lib/jenkins/workspace/ansible-neogym/* root@43.208.119.228:~/ansible-neogym"
+                sh "scp -r /var/lib/jenkins/workspace/ansible-neogym/* root@43.208.146.240:~/ansible-neogym"
             }
         }
         
