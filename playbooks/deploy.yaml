@@ -5,8 +5,8 @@
   tasks:
     - name: Creating the Container
       docker_container:
-        name: ansible-neogym-container
-        image: ansible-neogym:latest
+        name: edgecut-container
+        image: edgecut:latest
         ports:
           - "80:80"
         state: started
