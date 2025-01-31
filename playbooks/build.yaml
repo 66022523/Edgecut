@@ -5,9 +5,9 @@
   tasks:
     - name: Building Docker Image
       docker_image:
-        name: ansible-neogym:latest
+        name: edgecut:latest
         source: build
         build:
-          path: ~/ansible-neogym
+          path: ~/edgecut
         state: present
         force_source: true
